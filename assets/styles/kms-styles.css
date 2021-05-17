@@ -1,0 +1,222 @@
+.staff-grid__filter {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.staff-grid__filter span {
+	color: #ca2228;
+	font-weight: 700;
+}
+
+.staff-grid__filter__link {
+	border-bottom: 3px solid transparent;
+	color:  #a8a8a8;
+	display: inline-block;
+	font-weight: 700;
+	margin: 0 5px;
+	padding: 5px 15px;
+	background-color: #f8f8f8;
+}
+
+.staff-grid__filter__link:hover,
+.staff-grid__filter__link:focus,
+.staff-grid__filter__link.selected {
+	color: #49ca9f;
+	border-bottom-color: #ca2228;
+}
+
+.staff-grid {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: 610px) {
+	.staff-grid {
+		display: grid;
+		grid-template-columns: repeat(2,250px);
+		grid-gap: 30px 40px;
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.staff-grid {
+		grid-template-columns: repeat(3,250px);
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+	.staff-grid {
+		grid-template-columns: repeat(4,250px);
+	}
+}
+
+.staff-grid__item {
+	color: #a8a8a8;
+	margin: 20px auto;
+	position: relative;
+	text-decoration: none;
+	width: 250px;
+}
+
+@media only screen and (min-width: 610px) {
+	.staff-grid__item {
+		margin: 0;
+	}
+}
+
+.staff-grid__trigger {
+	display: block;
+	position: relative;
+}
+
+.staff-grid__photo img {
+	border-radius: 100%;
+	height: 250px;
+	object-fit: cover;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+	transition: opacity 0.25s ease;
+	width: 250px;
+}
+
+.staff-grid__trigger.is-expanded .staff-grid__photo img,
+.staff-grid__trigger:focus .staff-grid__photo img,
+.staff-grid__trigger:hover .staff-grid__photo img {
+	-webkit-filter: none;
+	filter: none;
+}
+
+.staff-grid__name {
+	color: #00b0ad;
+	font-family: 'Amatic SC';
+	font-size: 26px;
+	letter-spacing: 0;
+	line-height: 1;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.staff-grid__title {
+	color: #a8a8a8;
+	font-family: 'Noto Serif';
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0px;
+	line-height: 1.25;
+	text-align: center;
+}
+
+.staff-grid__content {
+	display: none;
+	min-width: 300px;
+	padding: 30px;
+	position: relative;
+	right: 25px;
+	z-index: 1;
+}
+
+@media only screen and (min-width: 400px) {
+	.staff-grid__content {
+		min-width: 390px;
+		right: 70px;
+	}
+}
+
+@media only screen and (min-width: 610px) {
+	.staff-grid__content {
+		min-width: 540px;
+		right: 0;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.staff-grid__content {
+		min-width: 830px;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+	.staff-grid__content {
+		min-width: 1120px;
+	}
+}
+
+@media only screen and (min-width: 610px) and (max-width: 991px) {
+	.staff-grid__item:nth-of-type(2n+2) .staff-grid__content {
+		right: 290px;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1139px) {
+	.staff-grid__item:nth-of-type(3n+2) .staff-grid__content {
+		right: 290px;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1139px) {
+	.staff-grid__item:nth-of-type(3n+3) .staff-grid__content {
+		right: 580px;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+	.staff-grid__item:nth-of-type(4n+2) .staff-grid__content {
+		right: 290px;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+	.staff-grid__item:nth-of-type(4n+3) .staff-grid__content {
+		right: 580px;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+	.staff-grid__item:nth-of-type(4n+4) .staff-grid__content {
+		right: 870px;
+	}
+}
+
+.staff-grid__content__close {
+	font-size: 12px;
+	line-height: 1;
+	padding: 5px;
+	position: absolute;
+	top: 35px;
+	right: 30px;
+	text-transform: uppercase;
+}
+
+.staff-grid__content__name {
+	color: #00b0ad;
+	font-family: 'Amatic SC';
+	font-size: 35px;
+	font-weight: 400;
+	letter-spacing: 0px;
+}
+
+.staff-grid__content__title {
+	font-family: 'Noto Serif';
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0px;
+	line-height: 1;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.staff-grid__content__bio {
+	font-size: 16px;
+	font-family: 'Noto Serif';
+	font-weight: 400;
+	letter-spacing: 0px;
+	line-height: 28px;
+}
+
+.staff-grid__loading {
+	max-height: 0;
+	padding: 60px 0;
+	opacity: 0;
+	text-align: center;
+}
